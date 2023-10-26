@@ -71,7 +71,7 @@ In order to run this project you need to:
 
 ### Install & Usage
 
-No instalattion for this project, just copy past commands from the SQL files:
+No instalattion for this project, just copy past commands from the SQL files
 
 <!-- AUTHORS -->
 
