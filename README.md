@@ -28,7 +28,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> For this project we used SQL, specifically POstgres.
 
 <details>
 <summary>Database</summary>
