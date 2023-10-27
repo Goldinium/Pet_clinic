@@ -18,3 +18,55 @@ VALUES
 ('Boarmon', '2005-06-07', 7, true, 20.4),
 ('Blossom', '1998-10-13', 3, true, 17),
 ('Ditto', '2022-05-14', 4, true, 22);
+
+/*populate table with details about pokemons owners*/
+
+INSERT INTO owners (full_name, age)
+VALUES 
+('Sam Smith', 34), ('Jennifer Orwell', 19), ('Bod', 45), ('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
+
+/*populate table with details about pokemons types*/
+
+INSERT INTO species (name)
+VALUES
+('Pokemon'),
+('Digimon');
+
+/*
+    If the name ends in "mon" it will be Digimon,
+    the rest are Pokemon
+*/
+
+UPDATE animals 
+SET species_id = CASE 
+WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon') 
+ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+END;
+
+/* include owner information*/
+
+UPDATE animals
+SET owner_id = owners.id
+FROM owners
+WHERE animals.name = 'Agumon' AND owners.full_name = 'Sam Smith';
+
+UPDATE animals
+SET owner_id = owners.id
+FROM owners
+WHERE animals.name IN ('Gabumon', 'Pikachu') AND owners.full_name = 'Jenniefer Orwell'; 
+
+UPDATE animals
+SET owner_id = owners.id
+FROM owners
+WHERE animals.name IN ('Devimon', 'Plantmon') AND owners.full_name = 'Bob'; 
+
+UPDATE animals
+SET owner_id = owners.id
+FROM owners
+WHERE animals.name IN ('Charmander', 'Spuirtle', 'Blossom') AND owners.full_name = 'Melody Pond'; 
+
+UPDATE animals
+SET owner_id = owners.id
+FROM owners
+WHERE animals.name IN ('Angemon', 'Boarmon') AND owners.full_name = 'Dean Winchester'; 
+
