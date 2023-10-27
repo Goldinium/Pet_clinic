@@ -30,6 +30,7 @@ BEGIN;
 UPDATE animals SET species = 'unspecified'; 
 select name, species from animals;
 ROLLBACK;
+select name, species from animals;
 
 /*2nd transaction*/
 
