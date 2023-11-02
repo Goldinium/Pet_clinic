@@ -80,6 +80,10 @@ No instalattion for this project, just copy past commands from the SQL files
 
 - GitHub: [@Goldinium](https://github.com/Goldinium)
 
+👤 **James**
+
+- GitHub: [@chiedozie013](https://github.com/chiedozie013)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
