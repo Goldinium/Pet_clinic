@@ -117,6 +117,7 @@ WHERE vets.name = 'William Tatcher'
 ORDER BY visits.visit_date DESC
 LIMIT 1;
 
+-- Add
 SELECT COUNT(DISTINCT visits.animal_id) AS animal_count
 FROM visits
 JOIN vets ON visits.vet_id = vets.id
