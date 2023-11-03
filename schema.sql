@@ -33,3 +33,12 @@ ALTER TABLE animals ADD COLUMN species_id integer REFERENCES species(id);
 /*Add column owner_id which is a foreign key referencing the owners table*/
 
 ALTER TABLE animals ADD COLUMN owner_id integer REFERENCES owners(id);
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX visit_animal_id ON visits(animal_id ASC); 
+
+CREATE INDEX visit_vet_id ON visits(vet_id);
+
+CREATE INDEX owners_email ON owners (email);
